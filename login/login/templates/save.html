@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>LOGIN SUCCESS</h1>
+<h2>SAVE YOUR DETAILS</h2>
+<!--{% csrf_token %}-->
+<form action="save" method="POST">
+{% csrf_token %}
+    NAME : <input type="text" name="name" placeholder="Name" required><br>
+    EMAIL  : <input type="text" name="email" placeholder="Email id" required><br>
+    MOBILE NUMBER  : <input type="number" name="mob" placeholder="mob num"  required><br>
+    ADDRESS : <input type="text" name="add" placeholder="Address" required><br>
+    <input type="submit" value="SAVE">
+    <input type="button" value="Go back!" onclick="history.back()">
+</form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>WELCOME TO SIGN IN PAGE</h1>
+<!--{% csrf_token %}-->
+<form action="sign" method="POST">
+{% csrf_token %}
+    USERNAME : <input type="text" name="username" placeholder="Username" required><br>
+    EMAIL ID   : <input type="text" name="email" placeholder="Email id" required><br>
+    PASSWORD  : <input type="password" name="pwd" placeholder="Password" required><br>
+    CONFIRM PASSWORD :<input type="password" name="cpwd" placeholder="Repeat Password" required><br>
+    <input type="submit" value="sign in">
+</form>
+{% endblock %}

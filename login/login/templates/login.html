@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>LOGIN PAGE</h1>
+<!--{% csrf_token %}-->
+<form action="log" method="POST">
+{% csrf_token %}
+    EMAIL ID  : <input type="text" name="email" placeholder="Email id" required><br>
+    PASSWORD : <input type="password" name="pwd" placeholder="Password" required><br>
+    <input type="submit" value="login">
+    <input type="button" value="Go back!" onclick="history.back()">
+</form>
+{% endblock %}
